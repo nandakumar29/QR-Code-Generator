@@ -3,10 +3,108 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>QR Craft - QR Code Generator</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    
+    <!-- Primary Meta Tags -->
+    <title>Free QR Code Generator Online - QR Craft | Create QR Codes Instantly</title>
+    <meta name="description" content="QR Craft - Free online QR code generator. Create custom QR codes for URLs, text, email, WiFi, SMS, and vCard. Download as PNG or SVG with customizable colors and sizes.">
+    <meta name="keywords" content="QR code generator, free QR code, create QR code, QR code maker, online QR code, custom QR code, QR code download">
+    <meta name="author" content="QR Craft">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <meta name="language" content="English">
+    <meta name="revisit-after" content="7 days">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://nandakumar29.github.io/QR-Code-Generator/">
+    <meta property="og:title" content="Free QR Code Generator Online - QR Craft">
+    <meta property="og:description" content="Create custom QR codes instantly. Download as PNG or SVG. Supports URLs, text, email, WiFi, SMS, and vCard formats.">
+    <meta property="og:image" content="https://nandakumar29.github.io/QR-Code-Generator/og-image.png">
+    <meta property="og:site_name" content="QR Craft">
+    <meta property="og:locale" content="en_US">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://nandakumar29.github.io/QR-Code-Generator/">
+    <meta name="twitter:title" content="Free QR Code Generator - QR Craft">
+    <meta name="twitter:description" content="Create beautiful QR codes in seconds. Customize colors, size, and error correction level.">
+    <meta name="twitter:image" content="https://nandakumar29.github.io/QR-Code-Generator/og-image.png">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://nandakumar29.github.io/QR-Code-Generator/">
+    
+    <!-- Preconnect to external resources -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+    
+    <!-- External Scripts & Stylesheets -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js" defer></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='75' font-size='75' fill='%236366f1'>⬛</text></svg>">
+    <meta name="theme-color" content="#6366f1">
+    
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "QR Craft",
+      "description": "Free online QR code generator. Create custom QR codes for URLs, text, email, WiFi, SMS, and vCard formats.",
+      "url": "https://nandakumar29.github.io/QR-Code-Generator/",
+      "applicationCategory": "Utility",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "Nandakumar"
+      },
+      "image": "https://nandakumar29.github.io/QR-Code-Generator/og-image.png",
+      "isAccessibleForFree": true,
+      "inLanguage": "en-US"
+    }
+    </script>
+    
+    <!-- Additional JSON-LD for FAQPage -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is QR Craft?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "QR Craft is a free online QR code generator that allows you to create custom QR codes for various data types including URLs, text, email, WiFi, SMS, and vCard."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I generate a QR code?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Simply enter your text or URL, customize the colors and size if needed, click 'Generate QR Code', and download as PNG or SVG."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What formats can I download?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You can download QR codes as PNG images or SVG vector format. Both formats support full customization including custom colors."
+          }
+        }
+      ]
+    }
+    </script>
+    
     <style>
         :root {
             --primary: #6366f1;
@@ -27,6 +125,10 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
         }
 
         body {
@@ -547,6 +649,28 @@
             font-size: 0.75rem;
             color: var(--text-muted);
         }
+
+        /* Accessibility */
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border-width: 0;
+        }
+
+        /* Page Performance */
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
     </style>
 </head>
 <body>
@@ -556,44 +680,44 @@
     <div class="container">
         <header>
             <div class="logo">
-                <div class="logo-icon">
+                <div class="logo-icon" aria-label="QR Craft Logo">
                     <i class="fas fa-qrcode"></i>
                 </div>
-                <span class="logo-text">QR Craft</span>
+                <h1 class="logo-text">QR Craft</h1>
             </div>
             <p class="tagline">Generate beautiful QR codes in seconds</p>
         </header>
 
-        <div class="main-content">
+        <main class="main-content">
             <!-- Input Card -->
-            <div class="card">
+            <article class="card">
                 <h2 class="card-title">
-                    <i class="fas fa-pen-to-square"></i>
+                    <i class="fas fa-pen-to-square" aria-hidden="true"></i>
                     Content
                 </h2>
 
                 <div class="input-group">
-                    <label class="input-label">Enter text, URL, or any data</label>
+                    <label for="qrText" class="input-label">Enter text, URL, or any data</label>
                     <div class="input-wrapper">
-                        <textarea id="qrText" placeholder="https://example.com or any text..." maxlength="2000"></textarea>
+                        <textarea id="qrText" placeholder="https://example.com or any text..." maxlength="2000" aria-describedby="charCount"></textarea>
                     </div>
                     <div class="char-count"><span id="charCount">0</span> / 2000 characters</div>
                 </div>
 
                 <h2 class="card-title" style="margin-top: 2rem;">
-                    <i class="fas fa-sliders"></i>
+                    <i class="fas fa-sliders" aria-hidden="true"></i>
                     Customization
                 </h2>
 
                 <div class="options-grid">
                     <div class="input-group">
-                        <label class="input-label">Size (px)</label>
-                        <input type="number" id="qrSize" value="256" min="100" max="1000" step="50">
+                        <label for="qrSize" class="input-label">Size (px)</label>
+                        <input type="number" id="qrSize" value="256" min="100" max="1000" step="50" aria-label="QR Code Size">
                     </div>
 
                     <div class="input-group">
-                        <label class="input-label">Error Correction</label>
-                        <select id="qrLevel">
+                        <label for="qrLevel" class="input-label">Error Correction</label>
+                        <select id="qrLevel" aria-label="Error Correction Level">
                             <option value="1">Low (L)</option>
                             <option value="0">Medium (M)</option>
                             <option value="3" selected>Quartile (Q)</option>
@@ -604,53 +728,56 @@
 
                 <div class="options-grid" style="margin-top: 1rem;">
                     <div class="input-group">
-                        <label class="input-label">Foreground Color</label>
+                        <label for="qrColor" class="input-label">Foreground Color</label>
                         <div class="color-picker-wrapper">
-                            <input type="color" id="qrColor" value="#000000">
-                            <span class="color-value" id="colorValue">#000000</span>
+                            <input type="color" id="qrColor" value="#000000" aria-label="Foreground Color Picker">
+                            <span class="color-value" id="colorValue" aria-live="polite">#000000</span>
                         </div>
                     </div>
 
                     <div class="input-group">
-                        <label class="input-label">Background Color</label>
+                        <label for="qrBgColor" class="input-label">Background Color</label>
                         <div class="color-picker-wrapper">
-                            <input type="color" id="qrBgColor" value="#ffffff">
-                            <span class="color-value" id="bgColorValue">#ffffff</span>
+                            <input type="color" id="qrBgColor" value="#ffffff" aria-label="Background Color Picker">
+                            <span class="color-value" id="bgColorValue" aria-live="polite">#ffffff</span>
                         </div>
                     </div>
                 </div>
 
-                <div class="preset-grid">
-                    <button class="preset-btn" onclick="applyPreset('url')">🔗 URL</button>
-                    <button class="preset-btn" onclick="applyPreset('email')">✉️ Email</button>
-                    <button class="preset-btn" onclick="applyPreset('wifi')">📶 WiFi</button>
-                    <button class="preset-btn" onclick="applyPreset('phone')">📞 Phone</button>
-                    <button class="preset-btn" onclick="applyPreset('sms')">💬 SMS</button>
-                    <button class="preset-btn" onclick="applyPreset('vcard')">👤 vCard</button>
-                </div>
+                <fieldset>
+                    <legend class="sr-only">QR Code Presets</legend>
+                    <div class="preset-grid">
+                        <button class="preset-btn" onclick="applyPreset('url')" aria-label="Generate URL QR Code">🔗 URL</button>
+                        <button class="preset-btn" onclick="applyPreset('email')" aria-label="Generate Email QR Code">✉️ Email</button>
+                        <button class="preset-btn" onclick="applyPreset('wifi')" aria-label="Generate WiFi QR Code">📶 WiFi</button>
+                        <button class="preset-btn" onclick="applyPreset('phone')" aria-label="Generate Phone QR Code">📞 Phone</button>
+                        <button class="preset-btn" onclick="applyPreset('sms')" aria-label="Generate SMS QR Code">💬 SMS</button>
+                        <button class="preset-btn" onclick="applyPreset('vcard')" aria-label="Generate vCard QR Code">👤 vCard</button>
+                    </div>
+                </fieldset>
 
                 <div class="btn-group" style="margin-top: 2rem;">
-                    <button class="btn btn-primary" id="generateBtn" onclick="generateQR()">
-                        <i class="fas fa-wand-magic-sparkles"></i>
+                    <button class="btn btn-primary" id="generateBtn" onclick="generateQR()" aria-label="Generate QR Code with specified settings">
+                        <i class="fas fa-wand-magic-sparkles" aria-hidden="true"></i>
                         Generate QR Code
                     </button>
-                    <button class="btn btn-secondary" onclick="clearAll()">
-                        <i class="fas fa-trash"></i>
+                    <button class="btn btn-secondary" onclick="clearAll()" aria-label="Clear all inputs and preview">
+                        <i class="fas fa-trash" aria-hidden="true"></i>
                         Clear
                     </button>
                 </div>
-            </div>
+            </article>
 
             <!-- Preview Card -->
-            <div class="card">
+            <article class="card">
                 <h2 class="card-title">
-                    <i class="fas fa-eye"></i>
+                    <i class="fas fa-eye" aria-hidden="true"></i>
                     Preview
                 </h2>
 
-                <div class="qr-preview" id="previewArea">
+                <div class="qr-preview" id="previewArea" role="region" aria-label="QR Code Preview">
                     <div class="qr-placeholder">
-                        <i class="fas fa-qrcode"></i>
+                        <i class="fas fa-qrcode" aria-hidden="true"></i>
                         <p>Your QR code will appear here</p>
                     </div>
                 </div>
@@ -658,16 +785,16 @@
                 <div class="download-section" id="downloadSection" style="display: none;">
                     <p class="download-title">Download as</p>
                     <div class="btn-group" style="justify-content: center;">
-                        <button class="btn btn-secondary" onclick="downloadQR('png')">
-                            <i class="fas fa-image"></i>
+                        <button class="btn btn-secondary" onclick="downloadQR('png')" aria-label="Download QR Code as PNG image">
+                            <i class="fas fa-image" aria-hidden="true"></i>
                             PNG
                         </button>
-                        <button class="btn btn-secondary" onclick="downloadQR('svg')">
-                            <i class="fas fa-vector-square"></i>
+                        <button class="btn btn-secondary" onclick="downloadQR('svg')" aria-label="Download QR Code as SVG vector">
+                            <i class="fas fa-vector-square" aria-hidden="true"></i>
                             SVG
                         </button>
-                        <button class="btn btn-secondary" onclick="copyQR()">
-                            <i class="fas fa-copy"></i>
+                        <button class="btn btn-secondary" onclick="copyQR()" aria-label="Copy QR Code image to clipboard">
+                            <i class="fas fa-copy" aria-hidden="true"></i>
                             Copy
                         </button>
                     </div>
@@ -675,21 +802,21 @@
 
                 <div class="history-section" id="historySection" style="display: none;">
                     <h3 class="card-title" style="font-size: 1rem;">
-                        <i class="fas fa-clock-rotate-left"></i>
+                        <i class="fas fa-clock-rotate-left" aria-hidden="true"></i>
                         Recent
                     </h3>
-                    <div id="historyList"></div>
+                    <div id="historyList" role="region" aria-label="Recent QR Codes"></div>
                 </div>
-            </div>
-        </div>
+            </article>
+        </main>
 
         <footer>
-            <p>QR Craft - Free QR Code Generator</p>
+            <p>&copy; 2024 QR Craft - Free QR Code Generator. All rights reserved.</p>
         </footer>
     </div>
 
     <!-- Toast -->
-    <div class="toast" id="toast">
+    <div class="toast" id="toast" role="alert" aria-live="assertive">
         <div class="toast-icon" id="toastIcon">
             <i class="fas fa-check"></i>
         </div>
@@ -780,7 +907,7 @@
             historyList.innerHTML = qrHistory.map((item, index) => {
                 const time = new Date(item.time).toLocaleTimeString();
                 return `
-                    <div class="history-item" onclick="loadHistory(${index})">
+                    <div class="history-item" onclick="loadHistory(${index})" role="button" tabindex="0" aria-label="Load QR code: ${escapeHtml(item.text.substring(0, 50))}">
                         <div class="history-info">
                             <div class="history-text">${escapeHtml(item.text.substring(0, 50))}${item.text.length > 50 ? '...' : ''}</div>
                             <div class="history-time">${time}</div>
@@ -940,6 +1067,19 @@
             if (e.ctrlKey && e.key === 'Enter') {
                 generateQR();
             }
+        });
+
+        // Keyboard navigation for history items
+        document.addEventListener('keydown', function(e) {
+            const historyItems = document.querySelectorAll('.history-item');
+            historyItems.forEach(item => {
+                item.addEventListener('keydown', function(event) {
+                    if (event.key === 'Enter' || event.key === ' ') {
+                        event.preventDefault();
+                        this.click();
+                    }
+                });
+            });
         });
     </script>
 </body>
